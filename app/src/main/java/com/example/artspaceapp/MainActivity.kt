@@ -9,7 +9,6 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -101,6 +100,11 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
     var item by remember { mutableStateOf(0) }
 
     when (item) {
+        0 -> ArtImageWithTitle(
+            imageResource = R.drawable.dom,
+            titleAlbumResource = stringResource(R.string.dom),
+            nameResource = stringResource(R.string.scrip_2015)
+        )
         1 -> ArtImageWithTitle(
             imageResource = R.drawable.prazdnik,
             titleAlbumResource = stringResource(R.string.prazdnik),
@@ -125,11 +129,8 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
             nameResource = stringResource(R.string.scrip_2021)
         )
 
-        else -> ArtImageWithTitle(
-            imageResource = R.drawable.dom,
-            titleAlbumResource = stringResource(R.string.dom),
-            nameResource = stringResource(R.string.scrip_2015)
-        )
+        5 -> item = 0
+        -1 -> item = 4
     }
 
     Row(
@@ -138,11 +139,13 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
     ) {
         Button(onClick = { item-- }, modifier = modifier.padding(start = 30.dp, end = 50.dp)) {
             Text(
-                text = stringResource(id = R.string.prv_btn)
+                text = stringResource(id = R.string.prv_btn),
+                modifier = modifier.padding(horizontal = 10.dp)
             )
         }
         Button(onClick = { item++ }, modifier = modifier.padding(end = 30.dp)) {
-            Text(text = stringResource(id = R.string.next_btn))
+            Text(text = stringResource(id = R.string.next_btn),
+            modifier = modifier.padding(horizontal = 25.dp))
 
         }
     }
