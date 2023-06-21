@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ArtSpaceApp</string>
+    <string name="next_btn">Next</string>
+    <string name="prv_btn">Previous</string>
+    <string name="scrip_2015">Scriptonite (2015)</string>
+    <string name="scrip_2017">Scriptonite (2017)</string>
+    <string name="scrip_2018">Scriptonite (2018)</string>
+    <string name="scrip_2019">Scriptonite (2019)</string>
+    <string name="scrip_2021">Scriptonite (2021)</string>
+
+
+    <string name="dom">Дом с нормальными явлениями</string>
+    <string name="prazdnik">Праздник на улице 36</string>
+    <string name="uroboros">Уроборос: Улица 36</string>
+    <string name="dva004">2004</string>
+    <string name="svistki">Свистки и бумажки</string>
+
+
+
+</resources>
